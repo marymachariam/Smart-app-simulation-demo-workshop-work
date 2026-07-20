@@ -1,0 +1,258 @@
+.main {
+  min-height: 100vh;
+  background: #14171c;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333b47;
+  padding-bottom: 1rem;
+}
+
+.eyebrow {
+  font-family: monospace;
+  color: #f2b705;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.title {
+  color: #eceef1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .logGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.logGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.panel {
+  background: #1e232b;
+  border: 1px solid #333b47;
+  border-radius: 6px;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.ticket {
+  display: inline-block;
+  background: #f2b705;
+  color: #14171c;
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.panelTitle {
+  color: #eceef1;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.field {
+  margin-bottom: 0.75rem;
+}
+
+.label {
+  display: block;
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #8b93a1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.input {
+  width: 100%;
+  background: #14171c;
+  border: 1px solid #333b47;
+  border-radius: 4px;
+  padding: 0.4rem 0.5rem;
+  color: #eceef1;
+  font-family: monospace;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #f2b705;
+}
+
+.btnPrimary,
+.btnSpike,
+.btnDelay,
+.btnGhost {
+  width: 100%;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-family: monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: filter 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btnPrimary {
+  background: #f2b705;
+  color: #14171c;
+  margin-top: 0.5rem;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btnPrimary:hover:not(:disabled),
+.btnSpike:hover,
+.btnDelay:hover {
+  filter: brightness(0.95);
+}
+
+.btnSpike {
+  background: rgba(242, 183, 5, 0.9);
+  color: #14171c;
+}
+
+.btnDelay {
+  background: #e2543a;
+  color: #14171c;
+}
+
+.btnGhost {
+  background: transparent;
+  border: 1px solid #333b47;
+  color: #8b93a1;
+  margin-bottom: 1rem;
+}
+
+.btnGhost:hover {
+  border-color: #f2b705;
+  color: #f2b705;
+}
+
+.queuedLabel {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #8b93a1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #8b93a1;
+}
+
+.disruptionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.disruptionItem {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #eceef1;
+  border-left: 2px solid #f2b705;
+  padding-left: 0.5rem;
+}
+
+.compareRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333b47;
+}
+
+.compareRow:last-child {
+  border-bottom: none;
+}
+
+.compareLabel {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #8b93a1;
+  text-transform: uppercase;
+}
+
+.compareValueAuto {
+  font-family: monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2fbf8f;
+}
+
+.compareValueNaive {
+  font-family: monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e2543a;
+}
+
+.logList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #eceef1;
+  max-height: 16rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logItem {
+  border-bottom: 1px solid #333b47;
+  padding-bottom: 0.25rem;
+}
